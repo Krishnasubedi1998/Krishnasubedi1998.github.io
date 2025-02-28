@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>349 Liquors</title>
-    <!-- Importing Google Fonts (Lobster for store name and Open Sans for About Us) -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -15,8 +14,7 @@
             margin: 0;
             padding: 0;
         }
-
-        /* Header Style */
+        
         header {
             background-color: #333;
             color: white;
@@ -25,12 +23,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        header h1 {
-            font-family: 'Lobster', cursive;
-            font-size: 40px;
-            margin: 0;
         }
 
         .nav {
@@ -48,121 +40,61 @@
         }
 
         .nav a:hover {
-            background-color: #9c5c55; /* Light maroon */
-        }
-
-        .contact-button {
             background-color: #9c5c55;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
         }
 
-        .contact-button:hover {
-            background-color: #7f4a3d;
-        }
-
-        /* Image container style */
         .image-container {
             position: relative;
             text-align: center;
-            margin: 0;
         }
 
         .image-container img {
-            width: 100%; /* Display the full image width */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
 
-        /* Store Name */
         .store-name {
             position: absolute;
-            top: 25%; /* Moved slightly down */
-            right: 5%; /* Left-aligned */
-            transform: translateX(0);
+            top: 25%;
+            right: 5%;
             color: red;
             font-size: 60px;
-            font-family: 'Lobster', cursive; /* Using Lobster font */
+            font-family: 'Lobster', cursive;
             font-weight: bold;
             text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
         }
 
-        /* Tagline */
         .tagline {
             position: absolute;
-            top: 35%; /* Moved slightly down from the store name */
-            right: 5%; /* Left-aligned */
-            transform: translateX(0);
+            top: 35%;
+            right: 5%;
             color: white;
             font-size: 24px;
-            font-family: Arial, sans-serif;
-            font-weight: normal;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
-        /* View Inventory Button */
         .button-container {
             position: absolute;
-            top: 45%; /* Adjusted to match the position below the tagline */
+            top: 45%;
             right: 5%;
-            transform: translateX(0);
-            margin-top: 20px;
         }
 
         .button {
-            background-color: #9c5c55; /* Yellowish light maroon color */
+            background-color: #9c5c55;
             color: white;
             padding: 20px 40px;
             font-size: 26px;
             font-weight: bold;
-            cursor: pointer;
-            border: none;
-            border-radius: 50px; /* Rounded edges */
+            border-radius: 50px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #7f4a3d; /* Darker shade for hover effect */
-            transform: scale(1.1); /* Slightly enlarge the button */
+            background-color: #7f4a3d;
+            transform: scale(1.1);
         }
 
-        /* About Section */
-        #about {
-            background-color: #f4f4f4;
-            padding: 40px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #about h2 {
-            font-size: 30px;
-            color: #333;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            width: 60%;
-        }
-
-        #about p {
-            font-size: 18px;
-            color: #555;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-        }
-
-        #about img {
-            width: 250px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Inventory Section */
         .content {
             padding: 20px;
         }
@@ -182,7 +114,6 @@
             text-align: right;
             color: #333;
             font-size: 24px;
-            position: relative;
         }
 
         .category ul {
@@ -204,38 +135,69 @@
             cursor: pointer;
         }
 
-        /* Hover effect for Budweiser (show full image when hovering over Budweiser in US Beers) */
-        .category li.budweiser:hover {
-            background-image: url('3494.png');
-            background-size: cover;
-            background-position: center center;
-            height: 200px; /* Adjust height to show the full image */
-            color: transparent;
-            text-align: center;
-            line-height: 200px;
-            transition: background-image 0.3s ease;
-        }
+        /* Responsive CSS for Mobile */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav a {
+                display: block;
+                text-align: center;
+                padding: 10px;
+                font-size: 18px;
+            }
 
-        /* Hover effect for Whiskeys (show image when hovering over the Whiskey title) */
-        .category h2.whiskeys:hover {
-            background-image: url('3491.png');
-            background-size: cover;
-            background-position: center center;
-            height: 300px; /* Set a fixed height */
-            color: transparent;
-            text-align: center;
-            line-height: 300px;
-            transition: background-image 0.3s ease;
-        }
+            .store-name, .tagline, .button-container {
+                top: 50%;
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
 
-        /* Bottom Contact Us Section */
-        .contact-bottom {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+            .store-name {
+                font-size: 40px;
+            }
+            .tagline {
+                font-size: 18px;
+            }
 
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+            #about h2 {
+                width: 100%;
+            }
+            #about img {
+                width: 80%;
+                max-width: 300px;
+                margin-top: 20px;
+            }
+
+            .inventory {
+                flex-direction: column;
+            }
+            .category {
+                width: 100%;
+                text-align: center;
+            }
+
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+            }
+
+            .contact-bottom div {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-bottom a {
+                width: 80%;
+                max-width: 250px;
+                margin: 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -379,3 +341,4 @@
         </div>
     </div>
 </div>
+
