@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>349 Liquors</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -14,33 +13,28 @@
             margin: 0;
             padding: 0;
         }
-        
+
         header {
             background-color: #333;
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .nav {
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .nav a {
             color: white;
-            padding: 14px 20px;
-            font-size: 20px;
+            padding: 10px;
+            font-size: 18px;
             text-decoration: none;
-            margin: 0 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav a:hover {
-            background-color: #9c5c55;
+            display: block;
+            width: 100%;
+            text-align: center;
         }
 
         .image-container {
@@ -53,169 +47,94 @@
             height: auto;
         }
 
-        .store-name {
+        .store-name, .tagline, .button-container {
             position: absolute;
-            top: 25%;
-            right: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .store-name {
+            top: 40%;
+            font-size: 40px;
             color: red;
-            font-size: 60px;
             font-family: 'Lobster', cursive;
-            font-weight: bold;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
         }
 
         .tagline {
-            position: absolute;
-            top: 35%;
-            right: 5%;
+            top: 50%;
+            font-size: 20px;
             color: white;
-            font-size: 24px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .button-container {
-            position: absolute;
-            top: 45%;
-            right: 5%;
+            top: 60%;
         }
 
         .button {
             background-color: #9c5c55;
             color: white;
-            padding: 20px 40px;
-            font-size: 26px;
-            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 20px;
             border-radius: 50px;
             text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .button:hover {
-            background-color: #7f4a3d;
-            transform: scale(1.1);
-        }
-
-        .content {
-            padding: 20px;
+            display: inline-block;
         }
 
         .inventory {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
         .category {
-            width: 30%;
+            width: 90%;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .category h2 {
-            text-align: right;
-            color: #333;
-            font-size: 24px;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
         }
 
-        .category ul {
-            list-style-type: none;
-            padding: 0;
+        .contact-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
 
-        .category li {
-            background-color: #fff;
-            margin: 5px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .category li:hover {
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-
-        /* Responsive CSS for Mobile */
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .nav {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: center;
             }
             .nav a {
-                display: block;
-                text-align: center;
-                padding: 10px;
-                font-size: 18px;
+                width: auto;
+                margin: 0 15px;
             }
-
-            .store-name, .tagline, .button-container {
-                top: 50%;
-                left: 50%;
-                right: auto;
-                transform: translate(-50%, -50%);
-                text-align: center;
-            }
-
-            .store-name {
-                font-size: 40px;
-            }
-            .tagline {
-                font-size: 18px;
-            }
-
-            #about {
-                flex-direction: column;
-                text-align: center;
-            }
-            #about h2 {
-                width: 100%;
-            }
-            #about img {
-                width: 80%;
-                max-width: 300px;
-                margin-top: 20px;
-            }
-
             .inventory {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-around;
             }
             .category {
-                width: 100%;
-                text-align: center;
-            }
-
-            .contact-form input, .contact-form textarea {
-                width: 100%;
-            }
-
-            .contact-bottom div {
-                flex-direction: column;
-                text-align: center;
-            }
-            .contact-bottom a {
-                width: 80%;
-                max-width: 250px;
-                margin: 10px auto;
+                width: 30%;
             }
         }
     </style>
 </head>
 <body>
-
-<!-- Header with navigation buttons and contact button on the right -->
 <header>
-    <div>
-        <h1>349 Liquors</h1>
-    </div>
+    <h1>349 Liquors</h1>
     <div class="nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#inventory">Product</a>
     </div>
-    <a href="#contact" class="contact-button">Order Online</a>
 </header>
 
-<!-- Place the image container with the store name, tagline, and button on the image -->
 <div class="image-container" id="home">
     <img src="3492.png" alt="349 Liquors">
     <div class="store-name">349 Liquors</div>
@@ -225,120 +144,33 @@
     </div>
 </div>
 
-<!-- About Section (Now at the top of the second page) -->
-<div id="about" class="content">
-    <h2>About Us</h2>
-    <div>
-        <p>349 Liquors is family owned bussiness been serving the community for several years, offering the best selection of spirits, beer, and wine from the U.S. and Mexico. We are dedicated to bringing our customers the finest products at great prices, with the added convenience of ordering online and having your favorite liquors delivered right to your door. Planning on adding some Nepalese spirits in future. Greeting from the Jhyap solti on the left here. Appreciate your bussiness MOFOs</p>
+<div id="inventory" class="inventory">
+    <div class="category">
+        <h2>US Beers</h2>
+        <ul>
+            <li>Budweiser</li>
+            <li>Coors Light</li>
+        </ul>
     </div>
-    <div>
-        <img src="3493.png" alt="349 Liquors" />
-    </div>
-</div>
-
-<!-- Inventory section -->
-<div id="inventory" class="content">
-    <h2>Our Inventory</h2>
-    <div class="inventory">
-        <!-- US Beers -->
-        <div class="category">
-            <h2>US Beers</h2>
-            <ul>
-                <li class="budweiser">
-                <a href="budweiser.html">
-                     Budweiser
-                </a>
-                </li>
-                <li>Coors Light</li>
-                <li>Michelob Ultra</li>
-                <li>Sam Adams Boston Lager</li>
-                <li>Sierra Nevada Pale Ale</li>
-            </ul>
-        </div>
-
-        <!-- Mexican Beers -->
-        <div class="category">
-            <h2>Mexican Beers</h2>
-            <ul>
-                <li>Corona Extra</li>
-                <li>Modelo Especial</li>
-                <li>Pacifico</li>
-                <li>Negra Modelo</li>
-                <li>Dos Equis</li>
-            </ul>
-        </div>
-
-        <!-- Whiskeys -->
-        <div class="category">
-            <h2 class="whiskeys">Whiskeys</h2>
-            <ul>
-                <li>Jack Daniel's</li>
-                <li>Jameson Irish Whiskey</li>
-                <li>Buffalo Trace</li>
-                <li>Maker's Mark</li>
-                <li>Glenfiddich Single Malt Scotch</li>
-            </ul>
-        </div>
-
-        <!-- Rums -->
-        <div class="category">
-            <h2>Rums</h2>
-            <ul>
-                <li>Bacardi Superior</li>
-                <li>Captain Morgan Spiced Rum</li>
-                <li>Malibu Coconut Rum</li>
-                <li>Mount Gay Eclipse Rum</li>
-                <li>Don Q Cristal Rum</li>
-            </ul>
-        </div>
+    <div class="category">
+        <h2>Mexican Beers</h2>
+        <ul>
+            <li>Corona Extra</li>
+            <li>Modelo Especial</li>
+        </ul>
     </div>
 </div>
 
-<!-- Contact Information (Bottom Section) -->
-<div id="contact" class="contact-bottom" style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #6e4b3a, #3a5a6d); padding: 40px 20px; border-radius: 8px;">
-    <!-- Contact Form on the Left -->
-    <div class="contact-form" style="flex: 1; padding: 20px; color: white; margin-right: 20px;">
-        <h3>Send us a Message</h3>
-        <form action="#" method="POST">
-            <div>
-                <label for="name" style="color: white;">Name:</label><br>
-                <input type="text" id="name" name="name" required style="padding: 8px; width: 60%; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
-            </div>
-            <div>
-                <label for="email" style="color: white;">Email:</label><br>
-                <input type="email" id="email" name="email" required style="padding: 8px; width: 60%; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
-            </div>
-            <div>
-                <label for="message" style="color: white;">Message:</label><br>
-                <textarea id="message" name="message" required rows="4" style="padding: 8px; width: 100%; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;"></textarea>
-            </div>
-            <div>
-                <button type="submit" style="background-color: #9c5c55; color: white; padding: 12px 25px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
-                    Submit
-                </button>
-            </div>
+<div id="contact" class="contact-bottom">
+    <div class="contact-form">
+        <h3>Contact Us</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
         </form>
     </div>
-
-    <!-- Contact Info on the Right -->
-    <div style="flex: 1; padding: 20px; color: white;">
-        <h2>Contact Us</h2>
-        <p>Phone: calling ....</p>
-        <p>Email: <a href="mailto:349@gmail.com" style="color: white; text-decoration: underline;">349@gmail.com</a></p>
-
-        <!-- Order Links Section -->
-        <h3>Order Online:</h3>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-            <!-- DoorDash Link (moved slightly to the right) -->
-            <a href="https://www.doordash.com/convenience/store/28989806" target="_blank" style="background-color: #E74C3C; color: white; padding: 10px 20px; font-size: 18px; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s; margin-left: 120px;">
-                Order via DoorDash
-            </a>
-
-            <!-- Uber Eats Link (moved slightly to the right, yellowish) -->
-            <a href="https://www.ubereats.com/store/349-liquor-beer-%26-wine-e-cig-and-vape-store/98HQTEKQVnOqIfQ8Yh02qQ/f7c1d04c-4290-5673-aa21-f43c621d36a9/80c7dccb-ce5b-488d-9ae7-2a3477b81964?diningMode=DELIVERY&ps=1&scats=80c7dccb-ce5b-488d-9ae7-2a3477b81964&scatsectypes=COLLECTION&scatsubs=" target="_blank" style="background-color: #F1C40F; color: white; padding: 10px 20px; font-size: 18px; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s; margin-left: 20px;">
-                Order via Uber Eats
-            </a>
-        </div>
-    </div>
 </div>
-
+</body>
+</html>
