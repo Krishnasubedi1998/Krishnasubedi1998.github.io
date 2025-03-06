@@ -285,21 +285,33 @@ header h1 {
         margin-top: 10px;
     }
 
+    /* Adjusting Store Name */
     .store-name {
-        font-size: 40px;
+        font-size: 40px;  /* Reduced font size for mobile */
         position: absolute;
-        top: 25%;
+        top: 25%;         /* Keep it slightly down */
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Center the text */
     }
 
+    /* Adjusting Slogan */
     .tagline {
-        font-size: 18px;
+        font-size: 18px;  /* Reduced font size for mobile */
+        top: 35%;         /* Adjust position */
+        left: 50%;
+        transform: translateX(-50%); /* Center the text */
+        width: 80%;       /* Limit width for better readability */
+        text-align: center; /* Center-align text */
     }
 
+    /* Adjusting the 'View Inventory' Button */
     .button-container .button {
-        font-size: 20px;
-        padding: 15px 25px;
+        font-size: 20px;   /* Smaller font size */
+        padding: 15px 30px; /* Adjust padding to make it more compact */
+        margin-top: 20px;   /* Add space above the button */
+        width: 80%;         /* Limit the button width */
+        left: 50%;
+        transform: translateX(-50%); /* Center the button */
     }
 
     /* About Section */
