@@ -270,13 +270,15 @@ header h1 {
     }
 
     .nav {
-        flex-direction: flex;
-        margin-top: 20px;
+        display: flex; /* Use flexbox to align items horizontally */
+        justify-content: center; /* Center the navigation links */
+        margin-top: 20px; /* Optional: space above the navigation */
     }
 
     .nav a {
-        font-size: 18px;
-        margin: 10px 0;
+        font-size: 18px; /* Adjust font size for mobile */
+        margin: 0 15px; /* Space between each link */
+        padding: 10px 15px; /* Adjust padding for mobile */
     }
 
     .contact-button, .takemethere-button {
