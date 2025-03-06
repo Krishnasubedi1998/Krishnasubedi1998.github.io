@@ -98,77 +98,68 @@ header h1 {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Fixing Store Name (349 Liquors) */
+/* Store Name */
 .store-name {
-    font-size: 28px;  /* Reduce font size on mobile */
     position: absolute;
-    top: 25%; /* Position it in the middle */
-    left: 85%;
-    transform: translateX(-50%);
+    top: 25%; /* Moved slightly down */
+    right: 5%; /* Left-aligned */
+    transform: translateX(0);
     color: red;
-    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    font-family: 'Lobster', cursive; /* Using Lobster font */
     font-weight: bold;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-    width: 100%; /* Ensures it's centered */
-    text-align: center;
 }
 
-    /* Fixing Slogan */
+/* Tagline */
 .tagline {
     position: absolute;
-    top: 39%; /* Position slightly below the store name */
-    left: 80%;
-    transform: translateX(-50%);
-    font-size: 10px;
+    top: 35%; /* Moved slightly down from the store name */
+    right: 5%; /* Left-aligned */
+    transform: translateX(0);
     color: white;
+    font-size: 24px;
     font-family: Arial, sans-serif;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    width: 80%; /* Ensures the slogan fits on smaller screens */
-    text-align: center; /* Centers the slogan */
 }
 
-    /* View Inventory Button */
-.button-container .button {
-    font-size: 10px;
-    padding: 5px 10px;
+/* View Inventory Button */
+.button-container {
     position: absolute;
-    top: 50%; /* Position below the slogan */
-    left: 100%;
-    transform: translateX(-50%);
-    background-color: #9c5c55;
+    top: 45%; /* Adjusted to match the position below the tagline */
+    right: 5%;
+    transform: translateX(0);
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #9c5c55; /* Yellowish light maroon color */
     color: white;
+    padding: 20px 40px;
+    font-size: 26px;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 50px; /* Rounded edges */
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-    /* Button Hover */
-.button-container .button:hover {
-    background-color: #7f4a3d;
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
-}
-    
-    /* Additional Layout Fixes */
-.image-container {
-    position: relative;
-    text-align: center;
-    margin: 0;
+.button:hover {
+    background-color: #7f4a3d; /* Darker shade for hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
-.image-container img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-    
-    /* Adjust Layout for Mobile on the About Section */
+/* About Section */
 #about {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 10px;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 #about h2 {
     font-size: 30px;
     color: #333;
@@ -294,76 +285,39 @@ header h1 {
         margin-top: 10px;
     }
 
-    /* Fixing Store Name (349 Liquors) */
+    /* Adjusting Store Name */
     .store-name {
-        font-size: 28px;  /* Reduce font size on mobile */
+        font-size: 40px;  /* Reduced font size for mobile */
         position: absolute;
-        top: 25%; /* Position it in the middle */
-        left: 85%;
-        transform: translateX(-50%);
-        color: red;
-        font-family: 'Lobster', cursive;
-        font-weight: bold;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-        width: 100%; /* Ensures it's centered */
-        text-align: center;
+        top: 25%;         /* Keep it slightly down */
+        left: 50%;
+        transform: translateX(-50%); /* Center the text */
     }
 
-    /* Fixing Slogan */
+    /* Adjusting Slogan */
     .tagline {
-        position: absolute;
-        top: 39%; /* Position slightly below the store name */
-        left: 80%;
-        transform: translateX(-50%);
-        font-size: 10px;
-        color: white;
-        font-family: Arial, sans-serif;
-        font-weight: normal;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        width: 80%; /* Ensures the slogan fits on smaller screens */
-        text-align: center; /* Centers the slogan */
+        font-size: 18px;  /* Reduced font size for mobile */
+        top: 35%;         /* Adjust position */
+        left: 50%;
+        transform: translateX(-50%); /* Center the text */
+        width: 80%;       /* Limit width for better readability */
+        text-align: center; /* Center-align text */
     }
 
-    /* View Inventory Button */
+    /* Adjusting the 'View Inventory' Button */
     .button-container .button {
-        font-size: 10px;
-        padding: 5px 10px;
-        position: absolute;
-        top: 50%; /* Position below the slogan */
-        left: 100%;
-        transform: translateX(-50%);
-        background-color: #9c5c55;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        border: none;
-        border-radius: 50px; /* Rounded edges */
-        transition: background-color 0.3s, transform 0.3s;
+        font-size: 20px;   /* Smaller font size */
+        padding: 15px 30px; /* Adjust padding to make it more compact */
+        margin-top: 20px;   /* Add space above the button */
+        width: 80%;         /* Limit the button width */
+        left: 50%;
+        transform: translateX(-50%); /* Center the button */
     }
 
-    /* Button Hover */
-    .button-container .button:hover {
-        background-color: #7f4a3d;
-        transform: scale(1.1); /* Slightly enlarge the button on hover */
-    }
-    
-    /* Additional Layout Fixes */
-    .image-container {
-        position: relative;
-        text-align: center;
-        margin: 0;
-    }
-
-    .image-container img {
-        width: 100%; /* Make the image responsive */
-        height: auto; /* Maintain aspect ratio */
-    }
-    
-    /* Adjust Layout for Mobile on the About Section */
+    /* About Section */
     #about {
         flex-direction: column;
         text-align: center;
-        padding: 20px 10px;
     }
 
     #about h2 {
