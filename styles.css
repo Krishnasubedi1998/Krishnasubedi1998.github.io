@@ -287,31 +287,31 @@ header h1 {
 
     /* Adjusting Store Name */
     .store-name {
-        font-size: 40px;  /* Reduced font size for mobile */
+        font-size: 30px;  /* Reduced font size for mobile */
         position: absolute;
-        top: 25%;         /* Keep it slightly down */
-        left: 50%;
-        transform: translateX(-50%); /* Center the text */
+        top: 15%;         /* Keep it slightly down */
+        right: 3%;
+        transform: translateX(0); /* Keep aligned to the right */
     }
 
     /* Adjusting Slogan */
     .tagline {
-        font-size: 18px;  /* Reduced font size for mobile */
-        top: 35%;         /* Adjust position */
-        left: 50%;
-        transform: translateX(-50%); /* Center the text */
+        font-size: 14px;  /* Reduced font size for mobile */
+        top: 32%;         /* Adjust position */
+        right: 3%;       /* Keep it on the right */
+        transform: translateX(0); /* Keep aligned to the right */
         width: 80%;       /* Limit width for better readability */
-        text-align: center; /* Center-align text */
+        text-align: right; /* Align text to the right */
     }
 
     /* Adjusting the 'View Inventory' Button */
     .button-container .button {
-        font-size: 20px;   /* Smaller font size */
-        padding: 15px 30px; /* Adjust padding to make it more compact */
-        margin-top: 20px;   /* Add space above the button */
-        width: 80%;         /* Limit the button width */
-        left: 50%;
-        transform: translateX(-50%); /* Center the button */
+        font-size: 14px;   /* Smaller font size */
+        padding: 8px 16px; /* Adjust padding to make it more compact */
+        margin-top: 10px;   /* Add space above the button */
+        width: 70%;         /* Limit the button width */
+        right: 2%;
+        transform: translateX(0); /* Keep aligned to the right */
     }
 
     /* About Section */
