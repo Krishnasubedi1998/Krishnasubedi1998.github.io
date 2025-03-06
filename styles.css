@@ -270,7 +270,7 @@ header h1 {
     }
 
     .nav {
-        flex-direction: column;
+        flex-direction: flex;
         margin-top: 20px;
     }
 
